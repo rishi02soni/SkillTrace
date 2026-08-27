@@ -201,8 +201,7 @@ SkillTrace/
 ├── README.md
 └── package.json
 ```
-
-> Update this structure to match your actual project folders.
+Future Updation 
 
 ---
 
