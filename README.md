@@ -9,7 +9,7 @@ The application uses **CognoDB** as the graph database and the official **Neo4j 
 
 ---
 
-## 🚀 Overview
+##  Overview
 
 Students often know the skills they have, but it can be difficult to understand:
 
@@ -22,7 +22,7 @@ SkillTrace models these entities and their relationships as a graph, making it e
 
 ---
 
-## ✨ Features
+##  Features
 
 - Student skill profiles
 - Career and job matching
@@ -37,7 +37,7 @@ SkillTrace models these entities and their relationships as a graph, making it e
 
 ---
 
-## 🧩 Why a Graph Database?
+##  Why a Graph Database?
 
 The core of SkillTrace is based on relationships between entities rather than isolated records.
 
@@ -75,7 +75,7 @@ These relationship-based queries can require more complex joins and query logic 
 
 ---
 
-## 🏗️ Architecture
+##  Architecture
 
 ```
                     ┌───────────────────┐
@@ -103,7 +103,7 @@ These relationship-based queries can require more complex joins and query logic 
 
 ---
 
-## 🗂️ Graph Data Model
+##  Graph Data Model
 
 ### Nodes
 
@@ -153,7 +153,7 @@ These relationship-based queries can require more complex joins and query logic 
 
 ---
 
-## 💻 Tech Stack
+##  Tech Stack
 
 ### Frontend
 
@@ -181,9 +181,9 @@ These relationship-based queries can require more complex joins and query logic 
 
 ---
 
-## 📁 Project Structure
+##  Project Structure
 
-```text
+```
 SkillTrace/
 │
 ├── frontend/
@@ -205,7 +205,7 @@ SkillTrace/
 
 ---
 
-## 🔑 Environment Variables
+##  Environment Variables
 
 Create a `.env` file in the backend:
 
@@ -227,7 +227,7 @@ COGNODB_PASSWORD=
 
 ---
 
-## ☁️ CognoDB Setup
+##  CognoDB Setup
 
 1. Create an account on CognoDB Cloud.
 2. Create a free `c0` instance.
@@ -239,7 +239,7 @@ COGNODB_PASSWORD=
 
 ---
 
-## ⚙️ Local Setup
+##  Local Setup
 
 ### Clone the repository
 
@@ -296,7 +296,7 @@ Then open the local URL shown in the terminal.
 
 ---
 
-## 🔍 Main Graph Queries
+##  Main Graph Queries
 
 ### Find jobs based on a student's skills
 
@@ -340,7 +340,7 @@ cypher/skill-gap.cypher
 
 ---
 
-## 🔐 Query Safety
+##  Query Safety
 
 All database queries use parameters instead of string concatenation.
 
@@ -361,7 +361,7 @@ User input is never directly concatenated into Cypher queries.
 
 ---
 
-## 🎯 Core User Flow
+##  Core User Flow
 
 ```
 Select Student
@@ -383,7 +383,7 @@ Explore Graph Connections
 
 ---
 
-## 🖥️ Screenshots
+##  Screenshots
 
 ### Dashboard
 
@@ -403,14 +403,14 @@ Explore Graph Connections
 
 ---
 
-## 🌐 Live Demo
+##  Live Demo
 
 **Hosted Application:**
 [https://YOUR-LIVE-DEMO-URL](https://YOUR-LIVE-DEMO-URL)
 
 ---
 
-## 🎥 Demo Video
+##  Demo Video
 
 **Screen Recording:**
 YOUR-DEMO-VIDEO-LINK
@@ -426,7 +426,7 @@ The demo covers:
 
 ---
 
-## 🚀 Deployment
+##  Deployment
 
 ### Frontend
 
@@ -452,7 +452,7 @@ COGNODB_PASSWORD=
 
 ---
 
-## 🛡️ Error Handling
+##  Error Handling
 
 SkillTrace handles common failures such as:
 
@@ -472,7 +472,7 @@ Please try again.
 
 ---
 
-## 📌 Future Improvements
+##  Future Improvements
 
 * Detailed career paths
 * Skill proficiency tracking
@@ -484,7 +484,7 @@ Please try again.
 
 ---
 
-## 📄 Assignment Context
+##  Assignment Context
 
 This project was built as part of the **Wexa AI – CognoDB Take-Home Assignment**.
 
@@ -501,7 +501,7 @@ The application demonstrates:
 
 ---
 
-## 👨‍💻 Author
+##  Author
 
 **Rishi Soni**
 
