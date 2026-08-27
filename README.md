@@ -7,6 +7,7 @@ SkillTrace is a graph-based career exploration application that helps students u
 
 The application uses **CognoDB** as the graph database and the official **Neo4j JavaScript driver** to work with connected career data.
 
+Live Link :- https://trace-skill2-0.vercel.app/
 ---
 
 ##  Overview
