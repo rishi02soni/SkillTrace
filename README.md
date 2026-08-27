@@ -1,9 +1,7 @@
 # SkillTrace
 
 
-# SkillTrace
-
-> **Map your skills. Find your path.**
+> Map your skills. Find your path.
 
 SkillTrace is a graph-based career exploration application that helps students understand how their current skills connect to jobs, companies, and learning resources.
 
@@ -43,7 +41,7 @@ SkillTrace models these entities and their relationships as a graph, making it e
 
 The core of SkillTrace is based on relationships between entities rather than isolated records.
 
-```text
+```
 Student
    |
    | HAS_SKILL
@@ -63,13 +61,13 @@ A student can have multiple skills, a skill can be required by multiple jobs, an
 
 This makes graph traversal a natural fit for queries such as:
 
-```text
+```
 Student → Skill → Job
 ```
 
 and:
 
-```text
+```
 Student → Skill → Job → Company
 ```
 
@@ -79,7 +77,7 @@ These relationship-based queries can require more complex joins and query logic 
 
 ## 🏗️ Architecture
 
-```text
+```
                     ┌───────────────────┐
                     │       User        │
                     └─────────┬─────────┘
@@ -117,7 +115,7 @@ These relationship-based queries can require more complex joins and query logic 
 
 ### Relationships
 
-```text
+```
 (Student)-[:HAS_SKILL]->(Skill)
 (Student)-[:COMPLETED]->(Course)
 (Course)-[:TEACHES]->(Skill)
@@ -127,7 +125,7 @@ These relationship-based queries can require more complex joins and query logic 
 
 ### Graph Diagram
 
-```text
+```
                          ┌──────────────┐
                          │   Company    │
                          └──────▲───────┘
@@ -211,7 +209,7 @@ SkillTrace/
 
 Create a `.env` file in the backend:
 
-```env
+```
 COGNODB_URI=bolt+s://your-instance.databases.cognodb.cloud
 COGNODB_USERNAME=cognodb
 COGNODB_PASSWORD=your_password
@@ -221,7 +219,7 @@ Never commit the `.env` file to GitHub.
 
 Use `.env.example`:
 
-```env
+```
 COGNODB_URI=
 COGNODB_USERNAME=cognodb
 COGNODB_PASSWORD=
@@ -245,21 +243,21 @@ COGNODB_PASSWORD=
 
 ### Clone the repository
 
-```bash
+```
 git clone https://github.com/YOUR_USERNAME/SkillTrace.git
 cd SkillTrace
 ```
 
 ### Install backend dependencies
 
-```bash
+```
 cd backend
 npm install
 ```
 
 ### Install frontend dependencies
 
-```bash
+```
 cd ../frontend
 npm install
 ```
@@ -268,19 +266,19 @@ npm install
 
 From the project root:
 
-```bash
+```
 node scripts/seed.js
 ```
 
 Or, if configured:
 
-```bash
+```
 npm run seed
 ```
 
 ### Start the backend
 
-```bash
+```
 cd backend
 npm run dev
 ```
@@ -289,7 +287,7 @@ npm run dev
 
 Open another terminal:
 
-```bash
+```
 cd frontend
 npm run dev
 ```
@@ -302,7 +300,7 @@ Then open the local URL shown in the terminal.
 
 ### Find jobs based on a student's skills
 
-```cypher
+```
 MATCH (s:Student)-[:HAS_SKILL]->(skill:Skill)-[:REQUIRED_FOR]->(job:Job)
 WHERE s.name = $studentName
 RETURN DISTINCT job;
@@ -310,13 +308,13 @@ RETURN DISTINCT job;
 
 This is a multi-hop traversal:
 
-```text
+```
 Student → Skill → Job
 ```
 
 ### Find companies connected to a student's skills
 
-```cypher
+```
 MATCH (s:Student)-[:HAS_SKILL]->(skill:Skill)
       -[:REQUIRED_FOR]->(job:Job)
       -[:OFFERED_BY]->(company:Company)
@@ -326,7 +324,7 @@ RETURN DISTINCT company;
 
 This traversal is:
 
-```text
+```
 Student → Skill → Job → Company
 ```
 
@@ -336,7 +334,7 @@ The application compares the skills a student currently has with the skills requ
 
 Keep the exact query used in the application inside:
 
-```text
+```
 cypher/skill-gap.cypher
 ```
 
@@ -348,7 +346,7 @@ All database queries use parameters instead of string concatenation.
 
 Example:
 
-```javascript
+```
 const query = `
   MATCH (s:Student {name: $name})
   RETURN s
@@ -365,7 +363,7 @@ User input is never directly concatenated into Cypher queries.
 
 ## 🎯 Core User Flow
 
-```text
+```
 Select Student
       ↓
 View Current Skills
@@ -436,7 +434,7 @@ Deploy the React frontend using Vercel.
 
 Set:
 
-```env
+```
 VITE_API_URL=https://your-backend-url.com
 ```
 
@@ -446,7 +444,7 @@ Deploy the Node.js backend using Render or Railway.
 
 Add:
 
-```env
+```
 COGNODB_URI=
 COGNODB_USERNAME=
 COGNODB_PASSWORD=
@@ -466,7 +464,7 @@ SkillTrace handles common failures such as:
 
 Example:
 
-```text
+```
 Unable to connect to the career database.
 
 Please try again.
@@ -509,7 +507,7 @@ The application demonstrates:
 
 GitHub: [https://github.com/YOUR_USERNAME](https://github.com/YOUR_USERNAME)
 
-LinkedIn: [https://www.linkedin.com/in/YOUR_LINKEDIN_USERNAME/](https://www.linkedin.com/in/YOUR_LINKEDIN_USERNAME/)
+LinkedIn: [https://www.linkedin.com/in/YOUR_LINKEDIN_USERNAME/](https://www.linkedin.com/in/rishi-soni-28986923b/)
 
 ---
 
