@@ -6,7 +6,7 @@
 // State Variables 
 // ------------------------------------------
 
-let currentStudentId = 'std_1';
+let currentStudentId = 'std_1'; 
 let currentTargetJobId = 'job_be';
 let activeTab = 'dashboard';
 let isDbConnected = true;
